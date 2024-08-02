@@ -1,11 +1,13 @@
 async function fetchData() {
   const url = "https://jsonplaceholder.typicode.com/posts";
+  try {
       const response = await fetch(url);
       const data = await response.json();
       displayData(data);
-
+  } catch (error) {
+      console.error("Error fetching data:", error);
+  }
 }
-
 function createCard(item) {
   const card = document.createElement("div");
   card.className = "col-md-4 mb-4";
