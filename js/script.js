@@ -8,6 +8,7 @@ async function fetchData() {
       console.error("Error fetching data:", error);
   }
 }
+fetchData();
 function createCard(item) {
   const card = document.createElement("div");
   card.className = "col-md-4 mb-4";
@@ -37,4 +38,4 @@ function displayData(data) {
   }
 }
 
-fetchData();
+
